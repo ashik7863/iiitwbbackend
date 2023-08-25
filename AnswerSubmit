@@ -1,0 +1,10 @@
+const mongoose = require("mongoose");
+const userResponseSchema = new mongoose.Schema({
+  registrationNumber: Number,
+  questionName: String,
+  questionId: mongoose.Types.ObjectId,
+  selectedOptionIndex: Number,
+  correctOptionIndex: Number,
+});
+
+module.exports = mongoose.model("UserResponse", userResponseSchema);
