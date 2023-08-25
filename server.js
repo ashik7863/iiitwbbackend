@@ -21,7 +21,7 @@ mongoose.connect("mongodb+srv://ashik123:7872145792@cluster0.iptlfq6.mongodb.net
   useUnifiedTopology: true,
 });
 
-app.get("/test", (req, res) => {
+app.get("/", (req, res) => {
   res.send("Hello");
 });
 
