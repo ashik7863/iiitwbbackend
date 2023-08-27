@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const tblSchema = new mongoose.Schema({
   user: String,
   course: String,
-  registrationno:Number,
+  registrationno:String,
   password: String,
   cpassword: String,
 });
