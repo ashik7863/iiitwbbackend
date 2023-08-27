@@ -61,6 +61,16 @@ app.post("/login", async (req, res) => {
   });
 });
 
+app.get("/getstudent", async (req, res) => {
+  try {
+    const student = await User.find({});
+    res.json(student);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
 app.get("/getuser/:name", async (req, res) => {
   const name = req.params.name;
   try {
